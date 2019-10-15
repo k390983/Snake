@@ -1,15 +1,26 @@
-## スネーク
+## About The Project
 
-> **※画面が大きすぎる場合、cmdのフォントサイズを変えてからゲームを再起動させて下さい。** 
+![Othello gif](../assets/snake.gif)
 
-![Snake gif](../assets/snake.gif)
+Just a Snake game that runs in the cmd.
 
-### 遊び方
+## Installation
 
-矢印キーで蛇を操作し、餌を食べます。壁または自分の胴体にあたるとゲームオバーです。餌を食べるとスコアが増えます。しかし、体が徐々に長くなっていくので難易度もどんどん難しくなっていきます。
+1. Download the repository
+2. Run the program by clicking on *Snake.exe*
+> **If the screen is to big please change the console font size and restart the game.**     
 
-### 操作方法
+## How To Play
 
-| キー			| 操作		|
-|---|---|
-| 矢印キー | 進行方向を変える	|
+Use the arrow keys to move. If you hit yourself or the wall it's game over. You get points by eating apples. However, every time you eat an apple your body gets longer, making the game more and more difficult.
+
+### Controls
+
+| Key	| Action	|
+|:--|---|
+| Arrow Keys | Change direction	|
+
+## Roadmap
+
+See [open issues](https://github.com/k390983/Snake/issues) for planned features and issues.
+
