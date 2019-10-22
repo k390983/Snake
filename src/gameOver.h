@@ -6,7 +6,7 @@ void gameOver(){
 	char highScoreS[100];
 	int highScoreI;
 
-	fp = fopen("score.txt","r");
+	fp = fopen(".\\log\\score.txt","r");
 
 	fgets(highScoreS,100,fp);
 

@@ -1,8 +1,4 @@
-/*
-cd C:\Users\Kai\Desktop\programing\snake\
-gcc main.c -o Snake
 
-*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <windows.h>
