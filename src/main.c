@@ -7,6 +7,7 @@
 #include <unistd.h>
 
 #include "global.h"
+#include "sounds.h"
 #include "draw.h"
 #include "spawner.h"
 #include "player.h"

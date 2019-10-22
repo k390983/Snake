@@ -16,20 +16,24 @@ int previousDrection_y;
 void control(){
 
     if((GetKeyState(VK_RIGHT) & 0x8000) && previousDrection_x != -1){
+        play_input();
         direction_x = 1;
         direction_y = 0;
 
     }else if((GetKeyState(VK_LEFT) & 0x8000) && previousDrection_x != 1){
+        play_input();
         direction_x = -1;
         direction_y = 0;
 
     }
     
     if((GetKeyState(VK_UP) & 0x8000) && previousDrection_y != 1){
+        play_input();
         direction_y = -1;
         direction_x = 0;
 
     }else if((GetKeyState(VK_DOWN) & 0x8000) && previousDrection_y != -1){
+        play_input();
         direction_y = 1;
         direction_x = 0;
 

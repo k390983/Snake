@@ -12,6 +12,9 @@ void gameOver(){
 
 	highScoreI = atoi(highScoreS);
 
+	mciSendString("stop main_theme", NULL, 0, 0);
+	play_game_over();
+
 	system("cls");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_INTENSITY);
 	printf("\n\n\n\n                  GAME OVER\n\n");

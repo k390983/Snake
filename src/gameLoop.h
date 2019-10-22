@@ -9,6 +9,7 @@ int score;
 int signal;
 float fps;
 float tps;
+int is_music_playng;
 
 void gameLoop(float gamespeed, int mode){
 	float currentTime, previousDraw, previousTick;
@@ -23,6 +24,7 @@ void gameLoop(float gamespeed, int mode){
     direction_y = 0;
 	previousDraw = timeFromStart();
 	previousTick = timeFromStart();
+    is_music_playng = 0;
 	
 	startup();
 
@@ -50,6 +52,12 @@ void gameLoop(float gamespeed, int mode){
 
 	while(1){
         currentTime = timeFromStart();
+
+        if(is_music_playng == 0){
+            play_main_theme();
+            is_music_playng = 1;
+
+        }
 
         control();
 

@@ -5,6 +5,8 @@ int apple_y;
 
 void spawner(){
 	while(1){
+		play_pickup();
+
 		apple_x = (rand() % 21) + 1;
 		apple_y = (rand() % 21) + 1;
 

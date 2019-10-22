@@ -16,3 +16,4 @@ extern int headHitBox_y;
 extern float fps;
 extern float tps;
 extern int mode;
+extern int is_music_playng;
