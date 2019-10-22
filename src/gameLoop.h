@@ -8,11 +8,10 @@ int direction_y;
 int score;
 int signal;
 float fps;
-float tps;
 int is_music_playng;
 
 void gameLoop(float gamespeed, int mode){
-	float currentTime, previousDraw, previousTick;
+	float currentTime, previousDraw, previousMove;
 	int i,j;
 
 	signal = 0;
@@ -23,7 +22,7 @@ void gameLoop(float gamespeed, int mode){
 	direction_x = 1;
     direction_y = 0;
 	previousDraw = timeFromStart();
-	previousTick = timeFromStart();
+    previousMove = timeFromStart();
     is_music_playng = 0;
 	
 	startup();
@@ -61,7 +60,10 @@ void gameLoop(float gamespeed, int mode){
 
         control();
 
-        if(currentTime - previousDraw > gamespeed){
+        if(currentTime - previousMove > gamespeed){
+
+            previousMove = timeFromStart();
+
             signal = 0;
 
             collision();
@@ -78,24 +80,19 @@ void gameLoop(float gamespeed, int mode){
 
             }
 
-            if(mode == 0){
-            	draw();
+        }
 
-            }else{
-            	debug();
+        if(mode == 0){
+            draw();
 
-            }
-
-            fps = 1 / (currentTime - previousDraw);
-
-            previousDraw = timeFromStart();
+        }else{
+            debug();
 
         }
 		
-		tps = 1 / (currentTime - previousTick);
+		fps = 1 / (currentTime - previousDraw);
 		
-		previousTick = timeFromStart();
-		
+		previousDraw = timeFromStart();
 
     }
 

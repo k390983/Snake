@@ -34,9 +34,11 @@ void menu(){
 	while(1){
 
 		if((GetKeyState(VK_RETURN) & 0x8000)){
+			play_select();
 				break;
 	
 			}else if((GetKeyState(VK_BACK) & 0x8000)){
+				play_select();
 				exit(0);
 	
 			}

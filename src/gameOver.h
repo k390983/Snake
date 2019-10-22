@@ -36,6 +36,7 @@ void gameOver(){
 
 	while(1){
 		if((GetKeyState(VK_RETURN) & 0x8000)){
+			play_select();
 			break;
 
 		}

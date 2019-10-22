@@ -25,3 +25,10 @@ void play_game_over(){
 	mciSendString("play game_over", NULL, 0, 0);
 	
 }
+
+void play_select(){
+	mciSendString("close select", NULL, 0, 0);
+	mciSendString("open sounds//select.mp3 type MPEGVideo alias select", NULL, 0, 0);
+	mciSendString("play select", NULL, 0, 0);
+	
+}
