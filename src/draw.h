@@ -70,7 +70,7 @@ void debug(){
     coord.Y = 0;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
     
-    printf("SCORE: %d fps: %f/10\n", score, fps);
+    printf("SCORE: %d fps: %2.2f/10\n", score, fps);
     
      for(i = 0; i < 23; i++){
         for(j = 0; j < 23; j++){

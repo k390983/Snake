@@ -62,6 +62,8 @@ void gameLoop(float gamespeed, int mode){
 
         if(currentTime - previousMove > gamespeed){
 
+            fps =  1 / (currentTime - previousMove);
+
             previousMove = timeFromStart();
 
             signal = 0;
@@ -89,10 +91,6 @@ void gameLoop(float gamespeed, int mode){
             debug();
 
         }
-		
-		fps = 1 / (currentTime - previousDraw);
-		
-		previousDraw = timeFromStart();
 
     }
 
